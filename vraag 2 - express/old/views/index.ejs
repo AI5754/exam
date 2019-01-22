@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  May Node and Express be with me.
+
+
+  <ul class="examen">
+    <% for(var i=0; i<examen.length; i++) {%>
+      <li class="examen">
+        <span><%= examen[i].student %></span>
+        <span><%= examen[i].examen %></span>
+        <span><%= examen[i].reden %></span>
+        <span><%= examen[i].datumIndienen %></span>
+      </li>
+    <% } %>
+  </ul>
+
+  <h2>Add</h2>
+  <form action="/examen" method="POST">
+    <input type="text" placeholder="student" name="student">
+    <input type="text" placeholder="examen" name="examen">
+    <input type="text" placeholder="reden" name="reden">
+    <input type="hidden" name="examens" value="examen">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div>
+    <h2>Update</h2>
+    <input type="text" placeholder="student" id="student">
+    <input type="text" placeholder="examen" id="examen">
+    <input type="text" placeholder="reden" id="reden">
+    <button id="update"> Darth Vadar invades! </button>
+  </div>
+
+  <div>
+    <h2>Delete Darth Vadar's first examen</h2>
+    <input type="text" placeholder="name" id="deleteName">
+    <button id="delete"> Delete first Darth Vadar examen </button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

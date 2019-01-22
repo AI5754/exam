@@ -1,0 +1,38 @@
+<div style="text-align:center">
+  <h1>Welcome to {{ title }}!</h1>
+</div>
+<div>
+  <input
+    type="text"
+    [(ngModel)]="naam"
+    placeholder="naam"
+    id="question"
+  /><br /><br />
+  <input
+    type="text"
+    [(ngModel)]="calorien"
+    placeholder="caloriën"
+    id="calorien"
+  /><br /><br />
+  <input
+    type="text"
+    [(ngModel)]="ingredienten"
+    placeholder="ingrediënten"
+    id="ingredienten"
+  /><br /><br />
+
+  <input
+    type="text"
+    [(ngModel)]="tijd"
+    placeholder="benodigde tijd"
+    id="tijd"
+  /><br /><br />
+
+  <input type="submit" value="Insert" (click)="giveAnswer()" /><br /><br />
+
+  <ul>
+    <li *ngFor="let recept of recepten">{{ getRecept(recept) }}</li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
